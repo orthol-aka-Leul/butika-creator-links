@@ -1,4 +1,3 @@
-
 name: Deploy ቡቲካ to GitHub Pages
 
 on:
@@ -27,6 +26,11 @@ jobs:
         with:
           node-version: 22
           cache: npm
+
+      # This repository currently contains a checked-in node_modules directory.
+      # Remove it so npm can create fresh Linux executables (including vite).
+      - name: Remove checked-in dependencies
+        run: rm -rf node_modules
 
       - name: Install dependencies
         run: npm install
