@@ -7,7 +7,7 @@ const creator = {
   name: 'call me ቡቲካ',
   handle: '@callmesimon21',
   bio: 'Habeshan memes, movie moments & stories that live rent-free in your head.',
-  avatarImage: '/profile.jpg',
+  avatarImage: `${import.meta.env.BASE_URL}profile.jpg`,
   status: 'NEW VIDEOS EVERY WEEK',
 };
 
